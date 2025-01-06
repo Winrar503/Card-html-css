@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/albun.css">
+    <title>Mi Carta Especial</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .carta {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 350px;
+            width: 100%;
+            position: relative;
+        }
+
+        .encabezado {
+            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            padding: 30px 20px;
+            text-align: center;
+            color: #ffffff;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .encabezado::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            transform: rotate(45deg);
+            animation: brillar 4s linear infinite;
+        }
+
+        @keyframes brillar {
+            0% {
+                transform: rotate(45deg) translateY(-100%);
+            }
+
+            100% {
+                transform: rotate(45deg) translateY(100%);
+            }
+        }
+
+        .contenido {
+            padding: 30px 20px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .firma {
+            text-align: right;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #ff9a9e;
+        }
+
+        .corazon {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 2em;
+            color: #ff9a9e;
+            animation: latir 1s ease-in-out infinite;
+        }
+
+        @keyframes latir {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .sello {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 60px;
+            height: 60px;
+            background-color: #fad0c4;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 0.8em;
+            color: #ffffff;
+            transform: rotate(-15deg);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carta">
+        <div class="encabezado">
+            Para Ti
+        </div>
+        <div class="contenido">
+            <p>Querida Ashley,</p>
+            <p>
+                Es difícil escribir estas palabras, pero siento que es lo mejor para ambos. Quiero que sepas que lo hago
+                desde un lugar de amor, respeto y gratitud por todo lo que compartimos.
+
+                Desde el día en que nos conocimos, llenaste mi vida de momentos hermosos que siempre recordaré con
+                cariño. Reímos, soñamos y compartimos un amor que en su momento fue mágico. Pero, con el tiempo, he
+                sentido que nuestras almas han comenzado a caminar por caminos distintos, y mantenernos juntos ahora
+                solo nos causa más dolor.
+            </p>
+            <p>
+                Quiero que recuerdes siempre que este final no borra los buenos recuerdos ni disminuye el valor de lo
+                que significamos el uno para el otro. El amor que tuvimos fue real, y aunque ahora tomemos rumbos
+                separados, eso no quita que fuiste una parte importante de mi vida y siempre lo serás.
+
+                Te deseo toda la felicidad y el amor que mereces. Espero que encuentres aquello que llene tu corazón de
+                la manera que soñaste, y que nunca dejes de ser la persona maravillosa que conocí.
+
+                Gracias por los momentos compartidos, por las lecciones aprendidas y por permitirme ser parte de tu
+                historia, aunque sea por un tiempo.
+
+
+            </p>
+            <div class="firma">Con amor,<br>Darwin ♡ </div>
+        </div>
+        <div class="corazon">❤️</div>
+        <!-- <div class="sello">Sello de Amor</div> -->
+
+    </div>
+
+
+</body>
+
+</html>

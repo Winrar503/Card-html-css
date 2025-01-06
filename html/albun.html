@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/albun.css">
     <title>Álbum de Fotos para Mi Novia</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,16 +14,19 @@
             margin: 0;
             padding: 20px;
         }
+
         h1 {
             text-align: center;
             color: #ff69b4;
         }
+
         .album {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             padding: 20px;
         }
+
         .foto {
             background-color: white;
             border-radius: 10px;
@@ -28,47 +34,106 @@
             overflow: hidden;
             transition: transform 0.3s ease;
         }
+
         .foto:hover {
             transform: scale(1.05);
         }
+
         .foto img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
+
         .foto .descripcion {
             padding: 10px;
             text-align: center;
         }
     </style>
 </head>
+
 <body>
     <h1>Nuestro Álbum de Fotos</h1>
+    <h5>Estas son algunas fotos de los momentos lindos que pasamos juntos,
+        recuerdalos siempre.
+    </h5>
     <div class="album">
         <div class="foto">
-            <img src="../img/istockphoto-855543412-612x612.jpg" alt="Foto 1">
-            <div class="descripcion">Nuestro primer día juntos</div>
+            <img src="../img/Amor/IMG-20241226-WA0048.jpg" alt="Foto 1">
+            <div class="descripcion">tu y yo en nuestras locuras 🥹</div>
         </div>
         <div class="foto">
-            <img src="/placeholder.svg?height=200&width=200" alt="Foto 2">
-            <div class="descripcion">Nuestra primera cita</div>
+            <img src="../img/Amor/IMG-20250105-WA0025.jpg" alt="Foto 2"
+                style="width: 100%; height: auto; object-fit: contain;">
+            <div class="descripcion">Navidad juntos </div>
         </div>
         <div class="foto">
-            <img src="/placeholder.svg?height=200&width=200" alt="Foto 3">
-            <div class="descripcion">Vacaciones en la playa</div>
+            <img src="../img/Amor/IMG-20250105-WA0027.jpg" alt="Foto 3"
+                style="width: 100%; height: auto; object-fit: contain;">
+            <div class="descripcion">❤️‍🩹</div>
+        </div>
+
+        <div class="foto">
+            <img src="../img/Amor/IMG-20250105-WA0029.jpg" alt="Foto 4"
+                style="width: 100%; height: auto; object-fit: contain;">
+            <div class="descripcion">Un día felices</div>
         </div>
         <div class="foto">
-            <img src="/placeholder.svg?height=200&width=200" alt="Foto 4">
-            <div class="descripcion">Celebrando tu cumpleaños</div>
+            <img src="../img/Amor/IMG-20250105-WA0030.jpg" alt="Foto 5"
+                style="width: 100%; height: auto; object-fit: contain;">
+            <div class="descripcion">zapatos jejej</div>
         </div>
         <div class="foto">
-            <img src="/placeholder.svg?height=200&width=200" alt="Foto 5">
-            <div class="descripcion">Nuestro aniversario</div>
+            <img src="../img/Amor/IMG-20250105-WA0033.jpg" alt="Foto 6"
+                style="width: 100%; height: auto; object-fit: contain;">
+            <div class="descripcion">Te mirabas tan linda 🥹❤️</div>
         </div>
         <div class="foto">
-            <img src="/placeholder.svg?height=200&width=200" alt="Foto 6">
-            <div class="descripcion">Un día en el parque</div>
+            <img src="../img/Amor/IMG-20250105-WA0034.jpg" alt="Foto 7"
+                style="width: 100%; height: auto; object-fit: contain;">
+            <div class="descripcion">...</div>
         </div>
+        <div class="foto">
+            <img src="../img/Amor/IMG-20250105-WA0036.jpg" alt="Foto 8"
+                style="width: 100%; height: auto; object-fit: contain;">
+            <div class="descripcion">tu en bachillerato 💔</div>
+        </div>
+        <div class="foto">
+            <img src="../img/Amor/IMG-20250105-WA0037.jpg" alt="Foto 9"
+                style="width: 100%; height: auto; object-fit: contain;">
+            <div class="descripcion">bachiller x2 :(</div>
+        </div>
+        <div class="foto">
+            <img src="../img/Amor/IMG-20250105-WA0038.jpg" alt="Foto 10">
+            <div class="descripcion">Nuestra primera vez jeje :(</div>
+        </div>
+        <div class="foto">
+            <img src="../img/Amor/IMG-20250105-WA0040.jpg" alt="Foto 11">
+            <div class="descripcion">:(</div>
+        </div>
+        <div class="foto">
+            <img src="../img/Amor/IMG-20250105-WA0041.jpg" alt="Foto 12"
+                style="width: 100%; height: auto; object-fit: contain;">
+            <div class="descripcion">Ultimas fotos juntos :(</div>
+        </div>
+        <div class="foto">
+            <img src="../img/Amor/IMG-20250105-WA0042.jpg" alt="Foto 13">
+            <div class="descripcion">La que mas me dolio, cuidando a mi
+                princesa ❤️‍🩹
+            </div>
+        </div>
+
+        <h3>Hay muchas mas fotos, pero esas estaran en mis recuerdos forever <br> :(</h3>
     </div>
+
+
+
+    <h5>Preciona aca para volver a la pagina anterior</h5>
+    <a href="../html/despedida.html">
+        <button>
+            <span> Atras </span>
+        </button>
+    </a>
 </body>
+
 </html>

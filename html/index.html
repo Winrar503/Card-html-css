@@ -4,81 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta/Despedida</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <title>Botones Bonitos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fef7e0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: #ff6f61;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h3::before,
+        h3::after {
+            content: "🎉";
+            font-size: 2rem;
+            margin: 0 10px;
+        }
+
+        .botones {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            max-width: 300px;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-cumple {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            color: #ffffff;
+            position: relative;
+        }
+
+        .btn-cumple::before {
+            content: "🎉";
+            font-size: 1.5rem;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+        }
+
+        .btn-cumple::after {
+            content: "🎂";
+            font-size: 1.5rem;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+        }
+
+        .btn-carta {
+            background: linear-gradient(45deg, #84fab0, #8fd3f4);
+            color: #ffffff;
+            position: relative;
+        }
+
+        .btn-carta::before {
+            content: "💌";
+            font-size: 1.5rem;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+        }
+
+        .btn-carta::after {
+            content: "📜";
+            font-size: 1.5rem;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Carta de Despedida</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Hola mi niña❤️‍🩹</h2>
-            <p>Para ti mi princesa</p>
-            <p class="parrafo">Esta es una carta de despedida, escrita con amor
-                y cuidado, para ti.<br>
-                <br>
-                Al escribir estas palabras,
-                mi corazón está lleno de emociones encontradas:
-                gratitud por los momentos compartidos,
-                nostalgia por lo que dejamos atrás, y
-                esperanza por lo que el futuro nos traerá.
-                Decir adiós nunca es fácil, pero quiero
-                que esta carta sea más que un simple cierre.
-                Es un homenaje a lo que hemos vivido juntos y
-                una manera de dejar en palabras lo que muchas
-                veces queda atrapado en el silencio.<br>
-                Cada línea que escribo está
-                impregnada de recuerdos y sentimientos que
-                llevan tu nombre.<br>
-                Este es un espacio donde el
-                pasado se encuentra con el presente, y donde quiero
-                dejar plasmados mis deseos para tu camino y el mío.<br>
-                No quiero que esta despedida
-                sea amarga, sino un recordatorio
-                de lo especial que ha sido este
-                capítulo y de todo lo que significas para mí.<br>
-                Porque aunque el tiempo y las circunstancias nos separen,
-                lo que compartimos siempre quedará en un rincón especial
-                de mi corazón.<br>
-                Gracias por haber sido parte
-                de mi historia. <br>
-                Espero que estas
-                palabras te encuentren con la misma calidez con la
-                que fueron escritas.<br>
-                Con cariño, Darwin quien siempre te amara. ❤️
-            </p>
-            <p>
-                Preciona cada uno de los botones de abajo <br>
-                ⬇<br>
-                ⬇
-            </p>
-        </section>
-        <br>
-        <div class="cards">
-            <div class="card red">
-                <p class="tip">Fotos</p>
-                <p class="second-text">clic</p>
-            </div>
-            <div class="card blue">
-                <p class="tip">Hover Me</p>
-                <p class="second-text">Lorem Ipsum</p>
-            </div>
-            <div class="card green">
-                <p class="tip">Hover Me</p>
-                <p class="second-text">Lorem Ipsum</p>
-            </div>
-            <div class="card green">
-                <a href="../html/bienvenida.html" style="display: block; width: 100%; height: 100%;">
-                    <p class="tip">Preciona aca</p>
-                    <p class="second-text">Preciona aca para volver <br> a la pagina donde estan los dos botones</p>
-                </a>
-            </div>
-        </div>
+    <h3>Presiona primero el botón de "Feliz Cumpleaños" y luego el de "Carta".</h3>
+    <div class="botones" id="botones">
+        <button class="btn btn-cumple" onclick="cumpleanos()">Feliz Cumpleaños</button>
+        <button class="btn btn-carta" onclick="carta()">Carta</button>
+    </div>
 
+    <script>
+        function cumpleanos() {
+            document.body.style.opacity = "0"; // Aplica el desvanecimiento
+            setTimeout(() => {
+                window.location.href = "../html/feliz.html"; // Redirige después de la animación
+            }, 500);
+        }
 
-    </main>
+        function carta() {
+            document.body.style.opacity = "0"; // Aplica el desvanecimiento
+            setTimeout(() => {
+                window.location.href = "../html/despedida.html"; // Redirige después de la animación
+            }, 500); // Ajusta el tiempo para que coincida con la duración de la transición
+        }
+    </script>
 </body>
 
 </html>
